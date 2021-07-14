@@ -1,0 +1,9 @@
+.cardanimationset:hover {
+    box-shadow: 20px 20px 20px solid red !important;
+}
+
+.cardanimationsetimg:hover {
+    background-color:rgb(206, 202, 202);
+    transition-property: background-color;
+    transition-duration: 2s;
+}

@@ -1,0 +1,15 @@
+.bgcolor{
+    background-color:black;
+    padding: 50px;
+    color: rgb(238, 235, 235);
+}
+.h2edit{
+    color:#00ffffbd;
+}
+
+.fooimgcenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }

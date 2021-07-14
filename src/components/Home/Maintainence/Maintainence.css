@@ -1,0 +1,23 @@
+.maintanencecontainer {
+    background-color: #000000b3;
+}
+.maintainenceleft img {
+    height: 400px;
+    width: 100%;
+    padding: 10px 0px;
+    border-radius:4px;
+}
+
+.maintainenceright {
+    padding: 30px 20px;
+}
+
+.maintainenceright h2{
+    color: #92ff7b;
+}
+.maintainenceright p{
+    color: rgb(255, 255, 255);
+    padding-top: 10px;
+    padding-left: 30px;
+    line-height: 40px;
+}

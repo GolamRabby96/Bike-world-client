@@ -1,0 +1,10 @@
+.navcolor{
+    background-color:rgba(21, 21, 24, 0.589);
+}
+.nav-link {
+    color: white !important;
+}
+.nav-link:hover{
+    color: rgb(48, 248, 81) !important;
+    transition: ease 1s;
+}

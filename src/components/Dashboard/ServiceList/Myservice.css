@@ -1,0 +1,9 @@
+.btn-pending{
+    background-color: rgba(226, 238, 159, 0.308);
+}
+.btn-ongoing{
+    background-color: rgba(22, 241, 223, 0.205);
+}
+.btn-done{
+    background-color: rgba(47, 2, 248, 0.062);
+}
