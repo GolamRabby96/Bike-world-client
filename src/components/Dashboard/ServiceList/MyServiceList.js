@@ -13,7 +13,7 @@ const MyServiceList = ({ mylist }) => {
 				/>
 				<div class="card-body">
 					<h5 class="card-title">
-						{mylist.serviceName} - ${mylist.price}
+						{mylist.serviceName} - $ {mylist.price}
 					</h5>
 					<p class="card-text">{mylist.serviceDetails}</p>
 					<button class={`btn btn-${mylist.status} btn-sm container`}>{mylist.status}</button>

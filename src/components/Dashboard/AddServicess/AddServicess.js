@@ -3,16 +3,15 @@ import TopBar from "../../TopBar/TopBar";
 import Sidebar from "../Sidebar/Sidebar";
 
 const AddServicess = () => {
-    const [info, setInfo] = useState({});
+	const [info, setInfo] = useState({});
 	const [file, setFile] = useState(null);
-	
-	console.log('this is info', info,file);
+
+	console.log("this is info", info, file);
 
 	const handleBlur = (e) => {
 		const newInfo = { ...info };
 		newInfo[e.target.name] = e.target.value;
 		setInfo(newInfo);
-		
 	};
 
 	const handleFileChange = (e) => {
@@ -20,14 +19,14 @@ const AddServicess = () => {
 		setFile(newFile);
 	};
 
-	 const handleSubmit = (e) => {
+	const handleSubmit = (e) => {
 		e.preventDefault();
 		const formData = new FormData();
 		formData.append("file", file);
 		formData.append("serviceName", info.serviceName);
 		formData.append("serviceDetails", info.serviceDetails);
 		formData.append("price", info.price);
-		console.log('this is formate datra',formData)
+		console.log("this is formate datra", formData);
 		fetch("https://agile-forest-05247.herokuapp.com/addservices", {
 			method: "POST",
 			body: formData,
@@ -39,18 +38,15 @@ const AddServicess = () => {
 			.catch((error) => {
 				console.error(error);
 			});
-			alert("Services added")
+		alert("Services added");
 	};
 
 	return (
 		<section>
-			<div className="container-fluid">
+			<Sidebar />
+			<div className="container">
 				<div className="row">
-					<TopBar/>
-					<div className="col-md-2 col-sm-12">
-						<Sidebar />
-					</div>
-					<div className="col-md-10">
+					<div className="col-md-12">
 						<form onSubmit={handleSubmit} className="p-5">
 							<div class="mb-3">
 								<label for="exampleInputEmail1" class="form-label">
@@ -58,11 +54,11 @@ const AddServicess = () => {
 								</label>
 								<input
 									type="text"
-									name='serviceName'
+									name="serviceName"
 									class="form-control"
 									id="exampleInputEmail1"
 									required
-                                    onBlur={handleBlur}
+									onBlur={handleBlur}
 								/>
 							</div>
 							<div class="mb-3">
@@ -71,10 +67,10 @@ const AddServicess = () => {
 								</label>
 								<input
 									type="text"
-									name='serviceDetails'
+									name="serviceDetails"
 									class="form-control"
 									required
-                                    onBlur={handleBlur}
+									onBlur={handleBlur}
 									id="exampleInputPassword1"
 								/>
 							</div>
@@ -84,10 +80,10 @@ const AddServicess = () => {
 								</label>
 								<input
 									type="number"
-									name='price'
+									name="price"
 									class="form-control"
 									required
-                                    onBlur={handleBlur}
+									onBlur={handleBlur}
 									id="exampleInputPassword1"
 								/>
 							</div>
@@ -100,7 +96,7 @@ const AddServicess = () => {
 									onChange={handleFileChange}
 								/>
 							</div>
-                            <br/>
+							<br />
 							<button type="submit" class="btn btn-primary">
 								Submit
 							</button>

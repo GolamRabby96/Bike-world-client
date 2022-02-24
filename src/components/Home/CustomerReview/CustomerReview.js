@@ -20,7 +20,7 @@ const CustomerReview = () => {
         if(reviewUser.length > 0){classget();}
     }, 500);
 	return (
-		<div className=" shadow mt-5">
+		<div className="container-fluid shadow mt-5">
 			<div className="row">
 				<div className="col-md-12 bg-info">
 					<div

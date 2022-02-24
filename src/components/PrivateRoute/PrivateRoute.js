@@ -7,12 +7,12 @@ const PrivateRoute = ({children, ...rest}) => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
       <Route
-            {...rest} 
+            {...rest}
             render = {({ location }) =>
             loggedInUser.email || sessionStorage.getItem('email')? ( children) : (
-            <Redirect  
+            <Redirect
             to={{
-                pathname: "/login",  
+                pathname: "/login",
                 state: { from: location } }}/>
           )
         }

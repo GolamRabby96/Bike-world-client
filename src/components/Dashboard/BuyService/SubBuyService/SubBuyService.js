@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import { UserContext } from "../../../../App";
 import Payment from "../../Payment/Payment";
 
-const SubBuyServices = () => {
+const 	SubBuyServices = () => {
 	const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 	const [singleService, setSignleService] = useState({});
 	// console.log(singleService);
@@ -46,6 +46,7 @@ const SubBuyServices = () => {
 		<div className="row">
 			<div className="col-md-8 pt-5">
 				<Payment handlepayment={handlepayment} />
+				<p>Card number : 4242 4242 4242 4242  (05 / 22) - (125) - (54658)</p>
 			</div>
 			<div className="col-md-4 mt-5">
 				<div class="card" style={{ width: "18rem" }}>
@@ -56,9 +57,10 @@ const SubBuyServices = () => {
 					/>
 					<div class="card-body">
 						<h5 class="card-title">
-							{singleService.serviceName} - ${singleService.price}
+							{singleService.serviceName} - $ {singleService.price}
 						</h5>
 						<p class="card-text">{singleService.serviceDetails}</p>
+						
 					</div>
 				</div>
 			</div>

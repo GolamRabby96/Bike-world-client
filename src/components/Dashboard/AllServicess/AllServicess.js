@@ -13,13 +13,11 @@ const AllServicess = () => {
 			});
 	}, []);
 	return (
-		<div className="container-fluid">
+		<div>
+			<Sidebar />
+			<div className="container">
 			<div className="row">
-				<TopBar />
-				<div className="col-md-2">
-					<Sidebar />
-				</div>
-				<div className="col-md-10">
+				<div className="col-md-12">
 					<div className="row">
 						{allServices.map((serviceList) => (
 							<SubAllServicess
@@ -30,6 +28,7 @@ const AllServicess = () => {
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	);
 };

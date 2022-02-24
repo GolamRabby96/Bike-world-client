@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from './components/Home/Home/Home'
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
@@ -18,6 +18,11 @@ export const UserContext = createContext();
 
 function App() {
 	const [loggedInUser, setLoggedInUser] = useState({});
+	useEffect(() =>{
+		const getEmail = sessionStorage.getItem("email");
+		setLoggedInUser({"email":getEmail});
+		console.log("............",getEmail);
+	},[])
 	return (
 		<UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
 		<Router>

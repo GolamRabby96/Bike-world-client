@@ -2,7 +2,8 @@ import React from 'react';
 import './Contact.css';
 const Contact = () => {
     return (
-       <section className="contact row mt-5">
+       <div id="contract" className="container-fluid">
+           <section className="contact row mt-5">
            <div className="shadow p-2">
                <div className="section-header text-center mb-5">
                     <h1>Keep connect with us</h1>
@@ -22,6 +23,7 @@ const Contact = () => {
                </div>
            </div>
        </section>
+       </div>
     );
 };
 

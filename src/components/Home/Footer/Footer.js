@@ -4,7 +4,8 @@ import bike from '../../../photos/bw.png'
 
 const Footer = () => {
 	return (
-		<div className="row bgcolor mt-5">
+		<div className="container-fluid">
+            <div className="row bgcolor mt-5">
 			<div className="col-md-6 ">
                 <img className="fooimgcenter" src={bike} alt=""/>
             </div>
@@ -33,6 +34,7 @@ const Footer = () => {
                 <p>Contacts</p>
             </div>
 		</div>
+        </div>
 	);
 };
 

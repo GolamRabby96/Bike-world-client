@@ -13,7 +13,7 @@ const AddAdmin = () => {
 	};
 
 	const handleSubmit = (e) => {
-		e.preventDefault()
+		e.preventDefault();
 		fetch("https://agile-forest-05247.herokuapp.com/AddAdmin", {
 			method: "POST",
 			headers: {
@@ -31,38 +31,33 @@ const AddAdmin = () => {
 	};
 
 	return (
-		<div className="container-fluid">
-			<div className="row">
-				<TopBar/>
-				<div className="col-md-2">
-					<Sidebar />
-				</div>
-				<div className="col-md-10">
-					<div className="p-5 mt-5 shadow">
-						<form onSubmit={handleSubmit}>
-							<div class="mb-3">
-								<label for="exampleInputEmail1" class="form-label">
-									Admin Email Address
-								</label>
-								<input
-									type="email"
-									class="form-control"
-                                    name='email'
-                                    required
-                                    onBlur={handleBlur}
-									id="exampleInputEmail1"
-									aria-describedby="emailHelp"
-								/>
-							</div>
+		<div>
+			<Sidebar />
+			<div className="container">
+				<div className="row">
+					<div className="col-md-12">
+						<div className="p-5 mt-5 shadow">
+							<form onSubmit={handleSubmit}>
+								<div class="mb-3">
+									<label for="exampleInputEmail1" class="form-label">
+										Admin Email Address
+									</label>
+									<input
+										type="email"
+										class="form-control"
+										name="email"
+										required
+										onBlur={handleBlur}
+										id="exampleInputEmail1"
+										aria-describedby="emailHelp"
+									/>
+								</div>
 
-							<button
-								
-								type="submit"
-								class="btn btn-sm container btn-primary"
-							>
-								Submit
-							</button>
-						</form>
+								<button type="submit" class="btn btn-sm container btn-primary">
+									Submit
+								</button>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>

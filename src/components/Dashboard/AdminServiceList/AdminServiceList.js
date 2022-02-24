@@ -22,24 +22,23 @@ const AdminServiceList = () => {
 	}, []);
 
 	return (
-		<div className="container-fluid">
-			<div className="row">
-				<TopBar/>
-				<div className="col-md-2">
-					<Sidebar />
-				</div>
-				<div style={{ overflow: "hidden"}} className="col-md-10">
-					<div className="ps-5 pt-3" style={{width: "90%"}}>
-						<table class="table table-striped table-hover ">
-							<tr>
-								<th className="ps-2">Email</th>
-								<th>Service</th>
-								<th>Amount</th>
-								<th style={{textAlign:'center'}}>Status</th>
-							</tr>
-							{check &&
-								viewServices?.map((view) => <EditServicesList view={view} />)}
-						</table>
+		<div>
+			<Sidebar />
+			<div className="container">
+				<div className="row">
+					<div style={{ overflow: "hidden" }} className="col-md-12">
+						<div className=" pt-3" style={{ width: "90%" }}>
+							<table class="table table-striped table-hover ">
+								<tr>
+									<th className="ps-2">Email</th>
+									<th>Service</th>
+									<th>Amount</th>
+									<th style={{ textAlign: "center" }}>Status</th>
+								</tr>
+								{check &&
+									viewServices?.map((view) => <EditServicesList view={view} />)}
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
